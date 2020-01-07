@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <meta charset="UTF-8" /> 
+  <title> 用户注册</title> 
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" /> 
+  <link href="images/favicon.ico" rel="shortcut icon" /> 
+  <link rel="apple-touch-icon-precomposed" href="images/mbbicon.png" /> 
+  <link rel="stylesheet" media="only screen" href="css/common.css" />  
+  <link rel="stylesheet" media="only screen" href="css/main.css" />  
+ </head> 
+ <body> 
+   <div id="mbSubTitle"> 
+    <section class="subTitleBox"> 
+     <a href="" class="backBtn"></a> 
+     <span>注册微博</span> 
+     <a href="" class="homeBtn"></a> 
+    </section> 
+   </div> 
+   <div id="mbMain"> 
+    <div id="frameRegisterMobile" class="frameLoginBox"> 
+     <section class="modBaseBox"> 
+      <form action="" style="margin: 0;padding: 0;"> 
+       <div class="modBd"> 
+        <ul class="formLogin"> 
+         <li><label for="regMobile">手机号码：</label> 
+           <span><input type="text" name="mobile" id="mobile"></span> 
+         </li> 
+         <li><label for="regPwd">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</label> 
+           <span><input type="password" name="password" id="password" /></span> 
+         </li> 
+         <li><label for="regRepPwd">确认密码：</label> 
+           <span><input type="password" name="confirmPassword" id="confirmPassword" /></span> 
+         </li> 
+        </ul> 
+        <div class="btnLoginBox"> 
+         <input type="submit" class="modBtnColor colorBlue" style="padding:0 80px" value="注册" id="submit"/> 
+        </div> 
+       </div> 
+      </form> 
+     </section> 
+    </div> 
+   </div>
+   <script>
+   	var moblie = document.querySelector('#mobile');
+   	var password = document.querySelector('#password');
+   	var confirmPassword = document.querySelector('#confirmPassword');
+   	var submit = document.querySelector('#submit');
+   	submit.onclick = function(){
+   		if(moblie.value != ''){
+   			localStorage.setItem('moblie', moblie.value);
+   			moblie.value = '';
+   			if(confirmPassword.value == password.value){
+	   			if(password.value != '' || confirmPassword.value != ''){
+		   			localStorage.setItem('password', password.value);
+		   			password.value = '';
+		   			confirmPassword.value='';
+					alert('注册成功');
+					window.location.href="login.html";
+		   		}else{
+		   			alert('请输入密码');
+		   		}
+	   		}else{
+	   			alert('两次密码不一致，请重新输入');
+	   		}
+   		}else{
+   			alert('请输入手机号');
+   		}
+   		
+   		return false;
+   	}
+   </script>
+ </body>
+</html>

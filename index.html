@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>秋冬新品</title>
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.css"/>
+		<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		a{text-decoration: none;}
+		header{
+			width: 100%;
+			height: 40px;
+			display: flex;
+			background: #b81c22;
+		}
+		header h1{
+			flex-direction: column;
+			margin: 0 auto;
+			text-align: center;
+			line-height: 36px;
+			font-size: 15px;
+			color: white;
+		}
+		.fa-chevron-left{
+			font-size: 20px;
+			line-height: 40px;
+			color: white;
+			padding-left: 10px;
+		}
+		#img{
+			width: 100%;
+			height: 200px;
+			background: url(images/bg.jpg) no-repeat;
+			background-size: contain;
+			border-bottom: 10px solid white;
+		}
+		.flex-new{
+			width: 100%;
+		}
+		.flex-box{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			
+		}
+		.flex-box img{
+			width: 48%;
+		}
+		footer{
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			height: 50px;
+			background: white;
+			display: flex;
+			justify-content: space-around;
+		}
+		footer a{
+			display: block;
+			color: #7C7C7C;
+		}
+		.fa-home,.fa-shopping-cart,.fa-user-o,.fa-podcast{
+			font-size: 24px;
+			margin-left: 5px;
+		}
+		</style>
+	</head>
+	<body>
+		<header>
+			<a href="login.html"><i class="fa fa-chevron-left"></i></a>
+			<h1>秋冬新品</h1>
+			<script>alert('欢迎回来，'+localStorage.getItem('moblie'));</script>
+		</header>
+		<div id="img"></div>
+		<div id="content">
+			<img src="images/nav.jpg" alt="nav.jpg" class="flex-new"/>
+			<div class="flex-box">
+				<img src="images/qdxp_05.jpg" alt="05"/>
+				<img src="images/qdxp_07.jpg" alt="07"/>
+				<img src="images/qdxp_09.jpg" alt="09"/>
+				<img src="images/qdxp_11.jpg" alt="11"/>
+				<img src="images/qdxp_13.jpg" alt="13"/>
+				<img src="images/qdxp_17g.jpg" alt="17"/>
+				<img src="images/qdxp_11.jpg" alt="11"/>
+				<img src="images/qdxp_13.jpg" alt="13"/>
+				<img src="images/qdxp_17g.jpg" alt="17"/>
+				<img src="images/qdxp_11.jpg" alt="11"/>
+			</div>
+		</div>
+		<footer>
+			<a href="">
+				<i class="fa fa-home"></i>
+				<p>主页</p>
+			</a>
+			<a href="">
+				<i class="fa fa-home"></i>
+				<p>分类</p>
+			</a>
+			<a href="">
+				<i class="fa fa-podcast"></i>
+				<p>频道</p>
+			</a>
+			<a href="">
+				<i class="fa fa-shopping-cart"></i>
+				<p>购物车</p>
+			</a>
+			<a href="">
+				<i class="fa fa-user-o"></i>
+				<p>我的</p>
+			</a>
+		</footer>
+	</body>
+</html>

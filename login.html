@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<title>新浪登录</title>
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.css"/>
+		<style type="text/css">
+		*{margin: 0;padding: 0;}
+		a{text-decoration: none;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+		
+		header a{
+			display: block;
+			margin: 15px;
+		}
+		header a img{
+			width: 20px;
+			height: 20px;
+		}
+		#content span{
+			width: 100%;
+			height: 40px;
+			display: block;
+			margin: 0 auto;
+			border-top: 1px solid #7c7c7c;
+			border-bottom: 1px solid #7c7c7c;
+			margin-top: 20px;
+		}
+		#content img{
+			display: block;
+			margin: 0 auto;
+		}
+		#content input{
+			width: 90%;
+			height: 40px;
+			border: 0;
+		}
+		#submit{
+			display: block;
+			width: 200px;
+			height: 30px;
+			color: white;
+			background: #ff8200;
+			margin: 0 auto;
+			margin-top: 20px;
+		}
+		</style>
+	</head>
+	<body>
+		<header>
+			<a href="#">
+				<img src="images/floatpic3.png" alt="pic03"/>
+			</a>
+		</header>
+		<div id="content">
+			<img src="images/WB_logo.png" alt="WB_logo" />
+			<form action="#">
+				<span>
+					<i class="fa fa-user-o"></i>
+					<input type="text" name="mobile" id="mobile" placeholder="邮箱/手机号"/>
+				</span>
+				<span>
+					<i class="fa fa-lock"></i>
+					<input type="password" name="password" id="password" placeholder="密码"/>
+				</span>
+				
+				<input type="submit" value="登录" id="submit"/>
+			</form>
+		</div>
+		<script type="text/javascript">
+			var mobile = document.querySelector('#mobile');
+			var password = document.querySelector('#password');
+			var submit = document.querySelector('#submit');
+			submit.onclick = function(){
+				if(mobile.value == localStorage.getItem('moblie') || password.value == localStorage.getItem('password')){
+					alert('登陆成功');
+					location.href="index.html";
+					mobile.value = '';
+					password.value = '';
+				}else{
+					alert('登录失败');
+				}
+				return false;
+			}
+		</script>
+	</body>
+</html>
